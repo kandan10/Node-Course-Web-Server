@@ -35,7 +35,7 @@ app.get('/', (req,res) => {
     res.render('home.hbs', {
         pageTitle: 'Home Page',
         welcomeMessage: 'yo'
-    })
+    });
 });
 
 app.get('/about', (req,res) => {
@@ -44,6 +44,11 @@ app.get('/about', (req,res) => {
     });
 });
 
+app.get('/projects', (req,res) => {
+    res.render('projects.hbs', {
+        pageTitle : 'Projects Page'
+    });
+});
 app.get('/bad', (req,res) => {
     res.send('Bad request');
 });
